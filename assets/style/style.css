@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url('../fonts/young-serif/YoungSerif-Regular.ttf') format(ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../fonts/outfit/Outfit-VariableFont_wght.ttf') format(ttf),
+         url('../fonts/outfit/static/Outfit-Black.ttf') format(ttf),
+         url('../fonts/outfit/static/Outfit-Bold.ttf') format(ttf),
+         url('../fonts/outfit/static/Outfit-ExtraBold.ttf') format(ttf),
+         url('../fonts/outfit/static/Outfit-ExtraLight.ttf') format(ttf),
+         url('../fonts/outfit/static/Outfit-Light.ttf') format(ttf),
+         url('../fonts/outfit/static/Outfit-Medium.ttf') format(ttf),
+         url('../fonts/outfit/static/Outfit-Regular.ttf') format(ttf),
+         url('../fonts/outfit/static/Outfit-SemiBold.ttf') format(ttf),
+         url('../fonts/outfit/static/Outfit-Thin.ttf') format(ttf);
+    font-weight: 100, 200, 300, 400, 600, 700, 800, 900;
+}
+
+:root {
+    --fundo: hsl(30, 54%, 90%);
+    --fundo2: hsl(30, 18%, 87%);
+    --fundo-principal: hsl(0, 0%, 100%);
+    --destaque: hsl(24, 5%, 18%);
+    --texto: hsl(30, 10%, 34%);
+    --titulo: hsl(14, 45%, 36%);
+    --titulo-pequeno: hsl(332, 51%, 32%);
+    --fundo-pequeno: hsl(330, 100%, 98%);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--fundo);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Outfit', sans-serif;
+    color: var(--texto);
+}
+
+main {
+    background-color: var(--fundo-principal);
+    width: 375px;
+}
+
+main>img.omelete {
+    width: 375px;
+    margin-top: 640px;
+}
+
+main>div#descricao {
+    margin: 30px;
+}
+
+main>div#descricao>h1 {
+    color: var(--destaque);
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-family: 'Outfit';
+}
+
+main>div#descricao>p {
+    font-size: 15.8px;
+    line-height: 25px;
+}
+
+main>div.preparacao {
+    background-color: var(--fundo-pequeno);
+    margin: 30px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+main>div.preparacao>h3 {
+    font-size: 20px;
+    color: var(--titulo-pequeno);
+    margin: -5px 0px 12px -12px;
+}
+
+main>div.preparacao>ul {
+    font-size: 17px;
+    margin: 10px 10px 10px 13px;
+    line-height: 35px;
+    padding: 0; 
+}
