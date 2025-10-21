@@ -52,6 +52,15 @@ main {
     width: 375px;
 }
 
+h2 {
+    font-family: 'Outfit';
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--titulo);
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
 main>img.omelete {
     width: 375px;
     margin-top: 640px;
@@ -83,12 +92,100 @@ main>div.preparacao {
 main>div.preparacao>h3 {
     font-size: 20px;
     color: var(--titulo-pequeno);
-    margin: -5px 0px 12px -12px;
+    margin: -5px 0px 12px -10px;
 }
 
 main>div.preparacao>ul {
     font-size: 17px;
-    margin: 10px 10px 10px 13px;
-    line-height: 35px;
-    padding: 0; 
+    margin: 10px 10px 0px 30px;
+    padding: 0;
+    list-style: none; 
+}
+
+main>div.preparacao>ul>li {
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+main>div.preparacao>ul>li::before {
+    content:"•";
+    position: absolute;
+    left: 112px;
+    font-size: 20px;
+    color: var(--titulo-pequeno);
+}
+
+main>div.preparacao>ul>li.ponto::before {
+    margin-top: 14px;
+}
+
+main>div.ingredientes>ul {
+    margin: 20px 40px 40px 70px;
+    line-height: 30px;
+    list-style: none;
+}
+
+main>div.ingredientes>ul>li::before {
+    content:"•";
+    position: absolute;
+    left: 90px;
+    font-size: 20px;
+    color: var(--titulo);
+}
+
+main>div.instrucao>ol {
+    margin: 20px 50px;
+    line-height: 22px;
+}
+
+main>div.instrucao>ol>li {
+    margin-bottom: 10px;
+    list-style: none;
+    counter-increment: li;
+}
+
+main>div.instrucao>ol>li::before {
+    content: counter(li);
+    color: var(--titulo);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+main>div.nutricao>p {
+    margin: 20px 40px 20px 30px;
+}
+
+main>div.nutricao>ul {
+    margin: 20px 0px 20px 60px;
+    list-style: none;
+    line-height: 40px;
+}
+
+hr {
+    margin: 0px 40px;
+}
+
+main>div.nutricao>table {
+    width: 100%;
+    margin: 15px 0px 60px 40px;
+    border-collapse: collapse;
+    width: 78%;
+}
+
+tr {
+    border-bottom: 1px solid hsl(0, 0%, 62%);
+}
+
+td {
+    padding: 12px 20px;
+}
+
+td:first-child {
+    color: var(--texto);
+}
+
+td:last-child {
+    color: var(--titulo);
+    font-weight: 600;
 }
