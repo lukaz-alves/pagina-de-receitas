@@ -1,0 +1,10 @@
+@media screen and (min-width: 720px) {
+    body {
+        height: 80%;
+    }
+
+    body>main {
+        width: 30em;
+        
+    }
+}

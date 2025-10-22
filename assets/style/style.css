@@ -40,7 +40,6 @@ body {
     display: flex;
     height: 100vh;
     background-color: var(--fundo);
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: 'Outfit', sans-serif;
@@ -50,6 +49,7 @@ body {
 main {
     background-color: var(--fundo-principal);
     width: 375px;
+    height: 125em;
 }
 
 h2 {
@@ -63,7 +63,6 @@ h2 {
 
 main>img.omelete {
     width: 375px;
-    margin-top: 640px;
 }
 
 main>div#descricao {
@@ -105,12 +104,13 @@ main>div.preparacao>ul {
 main>div.preparacao>ul>li {
     line-height: 25px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 main>div.preparacao>ul>li::before {
     content:"•";
     position: absolute;
-    left: 112px;
+    left: -32px;
     font-size: 20px;
     color: var(--titulo-pequeno);
 }
@@ -123,33 +123,42 @@ main>div.ingredientes>ul {
     margin: 20px 40px 40px 70px;
     line-height: 30px;
     list-style: none;
+    position: relative;
 }
 
 main>div.ingredientes>ul>li::before {
     content:"•";
     position: absolute;
-    left: 90px;
+    left: -32px;
     font-size: 20px;
     color: var(--titulo);
 }
 
+main>div.ingredientes>ul>li.ponto::before {
+    margin-top: 14px;
+}
+
+
 main>div.instrucao>ol {
-    margin: 20px 50px;
+    margin: 20px 50px 0px 70px;
     line-height: 22px;
 }
 
 main>div.instrucao>ol>li {
+    position: relative;
     margin-bottom: 10px;
     list-style: none;
     counter-increment: li;
 }
 
 main>div.instrucao>ol>li::before {
-    content: counter(li);
+    position: absolute;
+    content: counter(li)'.';
+    font-weight: 600;
     color: var(--titulo);
     display: inline-block;
     width: 1em;
-    margin-left: -1em;
+    margin-left: -2em;
 }
 
 main>div.nutricao>p {
@@ -160,10 +169,6 @@ main>div.nutricao>ul {
     margin: 20px 0px 20px 60px;
     list-style: none;
     line-height: 40px;
-}
-
-hr {
-    margin: 0px 40px;
 }
 
 main>div.nutricao>table {
@@ -188,4 +193,8 @@ td:first-child {
 td:last-child {
     color: var(--titulo);
     font-weight: 600;
+}
+
+hr {
+    margin: 0px 40px;
 }
