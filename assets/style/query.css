@@ -1,10 +1,26 @@
 @media screen and (min-width: 720px) {
-    body {
-        height: 80%;
+    main {
+        width: 38em;
+        margin: 6em 0em;
+        border-radius: 15px;
     }
 
-    body>main {
-        width: 30em;
-        
+    main>img.omelete {
+        width: 545px;
+        border-radius: 15px;
+        margin-top: 2em;
+        margin-left: 2em;
+    }
+
+    main>section.preparacao>ul>li.ponto::before {
+        margin-top: 0px;
+    }
+
+    main>section.ingredientes>ul>li.ponto::before {
+        margin-top: 0px;
+    }
+
+    main>section.nutricao>table {
+        width: 87%;
     }
 }

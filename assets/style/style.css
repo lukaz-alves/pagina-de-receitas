@@ -38,7 +38,7 @@
 
 body {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--fundo);
     align-items: center;
     flex-direction: column;
@@ -49,7 +49,6 @@ body {
 main {
     background-color: var(--fundo-principal);
     width: 375px;
-    height: 125em;
 }
 
 h2 {
@@ -65,95 +64,93 @@ main>img.omelete {
     width: 375px;
 }
 
-main>div#descricao {
+main>section#descricao {
     margin: 30px;
 }
 
-main>div#descricao>h1 {
+main>section#descricao>h1 {
     color: var(--destaque);
     margin-bottom: 14px;
     font-weight: 700;
     font-family: 'Outfit';
 }
 
-main>div#descricao>p {
+main>section#descricao>p {
     font-size: 15.8px;
     line-height: 25px;
 }
 
-main>div.preparacao {
+main>section.preparacao {
     background-color: var(--fundo-pequeno);
     margin: 30px;
     padding: 30px;
     border-radius: 10px;
 }
 
-main>div.preparacao>h3 {
+main>section.preparacao>h3 {
     font-size: 20px;
     color: var(--titulo-pequeno);
     margin: -5px 0px 12px -10px;
 }
 
-main>div.preparacao>ul {
+main>section.preparacao>ul {
     font-size: 17px;
     margin: 10px 10px 0px 30px;
     padding: 0;
     list-style: none; 
 }
 
-main>div.preparacao>ul>li {
+main>section.preparacao>ul>li {
     line-height: 25px;
     margin-bottom: 10px;
     position: relative;
 }
 
-main>div.preparacao>ul>li::before {
-    content:"•";
-    position: absolute;
-    left: -32px;
-    font-size: 20px;
+main ul li::before {
+  content: "•";
+  position: absolute;
+  left: -32px;
+  font-size: 20px;
+}
+
+main>section.preparacao>ul>li::before {
     color: var(--titulo-pequeno);
 }
 
-main>div.preparacao>ul>li.ponto::before {
+main>section.preparacao>ul>li.ponto::before {
     margin-top: 14px;
 }
 
-main>div.ingredientes>ul {
+main>section.ingredientes>ul {
     margin: 20px 40px 40px 70px;
     line-height: 30px;
     list-style: none;
     position: relative;
 }
 
-main>div.ingredientes>ul>li::before {
-    content:"•";
-    position: absolute;
-    left: -32px;
-    font-size: 20px;
+main>section.ingredientes>ul>li::before {
     color: var(--titulo);
 }
 
-main>div.ingredientes>ul>li.ponto::before {
+main>section.ingredientes>ul>li.ponto::before {
     margin-top: 14px;
 }
 
-
-main>div.instrucao>ol {
+main>section.instrucao>ol {
     margin: 20px 50px 30px 70px;
     line-height: 22px;
 }
 
-main>div.instrucao>ol>li {
+main>section.instrucao>ol>li {
     position: relative;
     margin-bottom: 10px;
     list-style: none;
     counter-increment: li;
 }
 
-main>div.instrucao>ol>li::before {
-    position: absolute;
+main>section.instrucao>ol>li::before {
     content: counter(li)'.';
+    position: absolute;
     font-weight: 600;
     color: var(--titulo);
     display: inline-block;
@@ -161,19 +158,19 @@ main>div.instrucao>ol>li::before {
     margin-left: -2em;
 }
 
-main>div.nutricao>p {
-    margin: 20px 40px 20px 30px;
+main>section.nutricao>p {
+    margin: 20px 40px 0px 30px;
 }
 
-main>div.nutricao>ul {
-    margin: 20px 0px 20px 60px;
+main>section.nutricao>ul {
+    margin: 20px 0px 0px 60px;
     list-style: none;
     line-height: 40px;
 }
 
-main>div.nutricao>table {
+main>section.nutricao>table {
     width: 100%;
-    margin: 15px 0px 60px 40px;
+    margin: 15px 0px 40px 40px;
     border-collapse: collapse;
     width: 78%;
 }
